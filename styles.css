@@ -1,76 +1,294 @@
-@import "reset.css";
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f6f9fc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 50px 0px; /*위아래 : 50px , 좌우:0px;*/
+  font-family: Abel;
+  color: #343a40;
+  margin: 0;
+  padding: 0;
+  margin-right: 300px;
 }
 
-.canvas {
-  width: 700px;
-  height: 700px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+.content_ttl {
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-left: 0.75rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.controls {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+hr {
+  border: solid 0.5px rgb(240, 238, 238);
 }
 
-.controls .controls__btns {
-  margin-bottom: 30px;
+.sidebar_ttl {
+  background-color: #bd5d38;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.controls__btns button {
-  all: unset;
-  cursor: pointer;
-  background-color: white;
-  padding: 5px 0px;
-  width: 80px;
+.sidebar {
+  background-color: #bd5d38;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+}
+
+.sidebar_menu li {
+  margin-top: 15px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.center .sidebar_menu {
   text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  color: rgba(0, 0, 0, 0.7);
-  text-transform: uppercase; /*대문자*/
-  font-weight: 700; /* 폰트굵기*/
-  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
-.kkj {
-  text-align: center;
-  display: flex;
-  padding: 20px;
-  font-size: 40px;
-  font-weight: 30px;
-  color: rgba(0, 0, 0, 0.7);
-  font-family: Nerko One;
+.sidebar_menu li a {
+  font-size: 18px;
+  font-weight: bolder;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: Abel;
+  letter-spacing: 0.3mm;
+  color: #fff;
+  text-transform: uppercase;
+  padding-left: 30px;
+  box-sizing: border-box;
+  width: 100%;
+  line-height: 30px;
+  transition: 0.5s;
+  padding: 0;
 }
 
-/*아이콘 클릭시 확대*/
-.controls__btns button:active {
+.sidebar_menu li a:hover {
+  color: rgb(209, 196, 188);
+}
+
+center {
+  margin-top: 200px;
+}
+
+.sidebar center img {
+  display: block;
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 90%;
+  border: 8px solid #ca7d60;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sidebar center img:active {
   transform: scale(0.98);
 }
 
-.controls .controls_colors {
-  display: flex;
+/* div who----------------------------------------------- */
+.who_section {
+  padding: 300px 250px 300px 100px;
+  transition: 0.5s;
+  font-family: Abel;
 }
 
-.controls_colors .controls_color {
-  width: 50px;
-  height: 50px;
+/* who detail--------------------------------------------- */
+.firstname {
+  color: #bd5d38;
+}
+
+.lastname {
+  color: #343a40;
+  font-family: "Poppins";
+  font-size: 60px;
+  margin: 0;
+}
+
+.subheading {
+  font-family: Abel;
+  font-weight: bold;
+  color: #343a40;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.subheading a {
+  color: #bd5d38;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+.lead {
+  font-family: Noto Sans KR;
+  font-weight: bold;
+  color: #343a40;
+  font-size: 20px;
+  padding: 20px 0px 0px 0px;
+  margin: 0px;
+}
+
+.social-icons {
+  font-family: Abel;
+  font-weight: bold;
+  color: #343a40;
+  font-size: 20px;
+  margin: 50px 0px;
+}
+
+.social-icons i {
   cursor: pointer;
-  border-radius: 25px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: #343a40;
+  font-size: 50px;
+  width: 80px;
+  height: 80px;
 }
 
-.controls .controls__range {
-  margin-bottom: 30px;
+.contact {
+  font-family: Abel;
+  font-size: 20px;
+}
+
+/* education----------------------------------------- */
+.education_section {
+  padding: 300px 250px 300px 100px;
+  transition: 0.5s;
+  font-family: Abel;
+}
+
+.mb {
+  font-family: Abel;
+  font-size: 50px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+.university {
+  padding-bottom: 35px;
+  font-size: 20px;
+}
+
+.fastcampus {
+  font-size: 20px;
+}
+
+.mb-0 {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+
+.text-primary {
+  float: right;
+  color: #bd5d38;
+  font-size: 18px;
+}
+
+.subheading_edu_2 {
+  margin: 0px;
+  color: gray;
+  font-size: 23px;
+}
+
+.subheading_edu_3 {
+  color: gray;
+  font-size: 19px;
+}
+
+/* Skills----------------------------------------- */
+
+.skill_section {
+  padding: 300px 250px 300px 100px;
+  transition: 0.5s;
+  font-family: Abel;
+}
+
+.front-end-icons {
+  display: flex;
+  list-style-type: none;
+  font-size: 60px;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.list-inline-item {
+  color: gray;
+  margin-right: 25px;
+}
+
+.front_end_li {
+  display: flex;
+  font-size: 16px;
+  list-style-type: none;
+  text-transform: none;
+  color: gray;
+  margin: 0;
+  padding: 0;
+}
+
+/* portfolio */
+
+.portfolio_section {
+  padding: 300px 250px 300px 100px;
+  transition: 0.5s;
+  font-family: Abel;
+}
+
+.drawing-wrapper {
+  display: inline-block;
+  text-align: center;
+}
+
+.drawing a img {
+  border: 0.5px solid rgb(228, 227, 227);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  width: 350px;
+  height: 350px;
+}
+
+.willbeupdate:hover {
+  transform: scale(1.1);
+}
+
+.willbeupdate {
+  margin-right: 50px;
+  float: left;
+  width: 350px;
+  height: 350px;
+  line-height: 350px;
+  background-color: #f5f9fc;
+  border: 0.5px solid rgb(228, 227, 227);
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  text-align: center;
+  color: gray;
+  transition: all ease 1s;
+}
+
+.board1 {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  margin-top: 10px;
+  margin-left: 120px;
+  color: gray;
+  font-size: 17px;
+}
+
+/* rights */
+.rights {
+  bottom: auto;
+  text-align: center;
+  color: #642912;
+  margin-top: 280px;
 }
